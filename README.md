@@ -1,6 +1,3 @@
-# ext-view-helper
-
-
 # MvcCore Extension - View Helper
 
 [![Latest Stable Version](https://img.shields.io/badge/Stable-v5.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/ext-view-helper-linebreaks/releases)
@@ -50,3 +47,7 @@ class FormatNumber extends \MvcCore\Ext\View\Helpers\AbstractHelper
 - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\Interfaces\IController`
 - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
 - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\Interfaces\IResponse`
+
+# Behaviour
+- Your view helper will be created by static method `GetInstance()` as singleton with abstract class `AbstractHelper`.
+- Everytime, when there will be rendered different view script (action view, layout view or subcontroller view), there will be called automaticly method `AbstractHelper::SetView($view);` to setup view object or other objects inside helper to actual ones.
