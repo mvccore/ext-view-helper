@@ -33,6 +33,12 @@ abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
 	const VERSION = '5.0.0-alpha';
+	
+	/**
+	 * View helper singleton instance.
+	 * @var \MvcCore\Ext\View\Helpers\AbstractHelper
+	 */
+	protected static $instance = NULL;
 
 	/**
 	 * Currently rendered view instance reference.
@@ -77,7 +83,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
 	 * @return \MvcCore\Ext\View\Helpers\AbstractHelper
 	 */
 	public static function & GetInstance () {
-		if (!static::$instance) static::$instance = new static();
+		if (static::$instance === NULL) static::$instance = new static();
 		return static::$instance;
 	}
 
