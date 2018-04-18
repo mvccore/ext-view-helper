@@ -23,10 +23,12 @@
 		"homepage": "https://github.com/tomFlidr"
 	}],
 	"require": {
-		"php": ">=5.4.0"
+		"php": ">=5.4.0",
+		"mvccore/mvccore": "dev-master"
 	},
 	"require-dev": {
-		"php": ">=5.4.0"
+		"php": ">=5.4.0",
+		"mvccore/mvccore": "@dev"
 	},
 	"autoload": {
 		"classmap": ["src/"]
