@@ -30,7 +30,7 @@
 	}],
 	"require": {
 		"php": ">=5.4.0",
-		"mvccore/mvccore": "@dev"
+		"mvccore/mvccore": "dev-master"
 	},
 	"autoload": {
 		"classmap": ["src/"]
