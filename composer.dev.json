@@ -25,7 +25,7 @@
 	"repositories": [{
 		"packagist.org": false
 	},{
-		"type": "vcs",
+		"type": "path",
 		"url": "../../../packages/mvccore/mvccore"
 	}],
 	"require": {
