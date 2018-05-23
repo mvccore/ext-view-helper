@@ -11,21 +11,21 @@
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
-namespace MvcCore\Ext\View\Helpers;
+namespace MvcCore\Ext\Views\Helpers;
 
 /**
  * Responsibility - better view helper setup.
  * - Everytine, when there is necessary to create view helper, there is called
- *   `\MvcCore\Ext\View\Helpers\IHelper::GetInstance();` method in `\Mvccore\View`.
+ *   `\MvcCore\Ext\Views\Helpers\IHelper::GetInstance();` method in `\Mvccore\View`.
  *   All view helpers are stored inside `\Mvccore\View` and they are created only once.
  *   But if you need to configure view helper anytime before, you can use this method
  *   for singleton instancing to configure anything staticly anytime before.
  * - Everytime, when currently rendered view object is changed (action view, layout view,
- *   subcontroller view...), there is called `\MvcCore\Ext\View\Helpers\IHelper::SetView($view);`
+ *   subcontroller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
  *   method giving currently rendered view object. From this object, you can get properties
  *   for better view helper processing like application object, controller, request or response object.
  */
-abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
+abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Line Breaks - version:
@@ -38,7 +38,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
 	/**
 	 * Currently rendered view instance reference.
 	 * Everytime, when there is rendered different view script,
-	 * this view property is changed by method `\MvcCore\Ext\View\Helpers\AbstractHelper::SetView();`.
+	 * this view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
 	 * @var \MvcCore\View|\MvcCore\Interfaces\IView
 	 */
 	protected $view = NULL;
@@ -46,7 +46,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
 	/**
 	 * Currently used controller instance reference for currently rendered view script.
 	 * Everytime, when there is rendered different view script,
-	 * this controller and also view property is changed by method `\MvcCore\Ext\View\Helpers\AbstractHelper::SetView();`.
+	 * this controller and also view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
 	 * @var \MvcCore\Controller|\MvcCore\Interfaces\IController
 	 */
 	protected $controller = NULL;
@@ -72,10 +72,10 @@ abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
 	 *
 	 * Example:
 	 *	// somewhere in base controller:
-	 *	`\MvcCore\Ext\View\Helpers\LineBreaks::GetInstance()
+	 *	`\MvcCore\Ext\Views\Helpers\LineBreaks::GetInstance()
 	 *		->SetView($this->view)
 	 *		->SetAnythingElseBeforeRendering(...);`
-	 * @return \MvcCore\Ext\View\Helpers\AbstractHelper
+	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 */
 	public static function & GetInstance () {
 		if (!static::$instance) static::$instance = new static();
@@ -91,7 +91,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\View\Helpers\IHelper
 	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
 	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\Interfaces\IResponse`
 	 * @param \MvcCore\View|\MvcCore\Interfaces\IView $view
-	 * @return \MvcCore\Ext\View\Helpers\AbstractHelper
+	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 */
 	public function & SetView (\MvcCore\Interfaces\IView & $view) {
 		$this->view = & $view;

@@ -11,17 +11,17 @@
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
-namespace MvcCore\Ext\View\Helpers;
+namespace MvcCore\Ext\Views\Helpers;
 
 /**
  * Responsibility - better view helper setup.
  * - Everytine, when there is necessary to create view helper, there is called
- *   `\MvcCore\Ext\View\Helpers\IHelper::GetInstance();` method in `\Mvccore\View`.
+ *   `\MvcCore\Ext\Views\Helpers\IHelper::GetInstance();` method in `\Mvccore\View`.
  *   All view helpers are stored inside `\Mvccore\View` and they are created only once.
  *   But if you need to configure view helper anytime before, you can use this method
  *   for singleton instancing to configure anything staticly anytime before.
  * - Everytime, when currently rendered view object is changed (action view, layout view,
- *   subcontroller view...), there is called `\MvcCore\Ext\View\Helpers\IHelper::SetView($view);`
+ *   subcontroller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
  *   method giving currently rendered view object. From this object, you can get properties
  *   for better view helper processing like application object, controller, request or response object.
  */
@@ -29,7 +29,7 @@ interface IHelper
 {
 	/**
 	 * Create view helper instance, everytime new instance or singleton instance, it's up to you.
-	 * @return \MvcCore\Ext\View\Helpers\IHelper
+	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	public static function & GetInstance ();
 
@@ -42,7 +42,7 @@ interface IHelper
 	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
 	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\Interfaces\IResponse`
 	 * @param \MvcCore\View|\MvcCore\Interfaces\IView $view
-	 * @return \MvcCore\Ext\View\Helpers\IHelper
+	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	public function & SetView (\MvcCore\Interfaces\IView & $view);
 }
