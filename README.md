@@ -19,9 +19,9 @@ Your custom primitive view helper code:
 namespace App\Views\Helpers;
 
 class FormatNumber {
-    public function FormatNumber ($number) { // $number = 1234.56;
-        return number_format($number); // english notation - 1,234
-    }
+	public function FormatNumber ($number) { // $number = 1234.56;
+		return number_format($number); // english notation - 1,234
+	}
 }
 ```
 
@@ -32,13 +32,13 @@ class FormatNumber {
 namespace App\Views\Helpers;
 
 class FormatNumber extends \MvcCore\Ext\Views\Helpers\AbstractHelper
-    public function FormatNumber ($number) { // $number = 1234.56;
-        if ($this->request->GetLang() == 'fr') {
-            return number_format($number, 2, ',', ' '); // french notation: 1 234,56
-        } else {
-            return number_format($number); // english notation: 1,234
-        }
-    }
+	public function FormatNumber ($number) { // $number = 1234.56;
+		if ($this->request->GetLang() == 'fr') {
+			return number_format($number, 2, ',', ' '); // french notation: 1 234,56
+		} else {
+			return number_format($number); // english notation: 1,234
+		}
+	}
 }
 ```
 
