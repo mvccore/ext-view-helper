@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/ext-view-helper",
 	"type": "library",
-	"description": "MvcCore Extension - View Helper - abstract class code and interface support code to create more sofisticated view helpers with better setup and protected properties.",
+	"description": "MvcCore - Extension - View - Helper - abstract class code and interface support code to create more sofisticated view helpers with better setup and protected properties.",
 	"keywords": [
 		"mvc", 
 		"mvccore", 
