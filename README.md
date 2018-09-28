@@ -43,10 +43,10 @@ class FormatNumber extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 ```
 
 # Automaticly assigned protected properties
-- `AbstractHelper::$view` as `\MvcCore\View|\MvcCore\Interfaces\IView`
-- `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\Interfaces\IController`
-- `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
-- `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\Interfaces\IResponse`
+- `AbstractHelper::$view` as `\MvcCore\View|\MvcCore\IView`
+- `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\IController`
+- `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\IRequest`
+- `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\IResponse`
 
 # Behaviour
 - Your view helper will be created by static method `GetInstance()` as singleton with abstract class `AbstractHelper`.

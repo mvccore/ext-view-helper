@@ -39,7 +39,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Currently rendered view instance reference.
 	 * Everytime, when there is rendered different view script,
 	 * this view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
-	 * @var \MvcCore\View|\MvcCore\Interfaces\IView
+	 * @var \MvcCore\View|\MvcCore\IView
 	 */
 	protected $view = NULL;
 
@@ -47,19 +47,19 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Currently used controller instance reference for currently rendered view script.
 	 * Everytime, when there is rendered different view script,
 	 * this controller and also view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
-	 * @var \MvcCore\Controller|\MvcCore\Interfaces\IController
+	 * @var \MvcCore\Controller|\MvcCore\IController
 	 */
 	protected $controller = NULL;
 
 	/**
 	 * Current request object reference from used controller.
-	 * @var \MvcCore\Request|\MvcCore\Interfaces\IRequest
+	 * @var \MvcCore\Request|\MvcCore\IRequest
 	 */
 	protected $request = NULL;
 
 	/**
 	 * Current response object reference from used controller.
-	 * @var \MvcCore\Response|\MvcCore\Interfaces\IResponse
+	 * @var \MvcCore\Response|\MvcCore\IResponse
 	 */
 	protected $response = NULL;
 
@@ -86,14 +86,14 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Set currently rendered view instance every time this helper
 	 * is called and the rendered view instance is changed.
 	 * This method sets these protected object references:
-	 * - `AbstractHelper::$view` as `\MvcCore\View|\MvcCore\Interfaces\IView`
-	 * - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\Interfaces\IController`
-	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
-	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\Interfaces\IResponse`
-	 * @param \MvcCore\View|\MvcCore\Interfaces\IView $view
+	 * - `AbstractHelper::$view` as `\MvcCore\View|\MvcCore\IView`
+	 * - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\IController`
+	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\IRequest`
+	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\IResponse`
+	 * @param \MvcCore\View|\MvcCore\IView $view
 	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 */
-	public function & SetView (\MvcCore\Interfaces\IView & $view) {
+	public function & SetView (\MvcCore\IView & $view) {
 		$this->view = & $view;
 		$this->controller = & $view->GetController();
 		$this->request = & $this->controller->GetRequest();

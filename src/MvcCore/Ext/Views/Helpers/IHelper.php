@@ -37,12 +37,12 @@ interface IHelper
 	 * Set currently rendered view instance every time this helper
 	 * is called and the rendered view instance is changed.
 	 * This method sets these protected object references:
-	 * - `AbstractHelper::$view` as `\MvcCore\View|\MvcCore\Interfaces\IView`
-	 * - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\Interfaces\IController`
-	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\Interfaces\IRequest`
-	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\Interfaces\IResponse`
-	 * @param \MvcCore\View|\MvcCore\Interfaces\IView $view
+	 * - `AbstractHelper::$view` as `\MvcCore\View|\MvcCore\IView`
+	 * - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\IController`
+	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\IRequest`
+	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\IResponse`
+	 * @param \MvcCore\View|\MvcCore\IView $view
 	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
-	public function & SetView (\MvcCore\Interfaces\IView & $view);
+	public function & SetView (\MvcCore\IView & $view);
 }
