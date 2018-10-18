@@ -34,7 +34,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	const VERSION = '5.0.0-alpha';
 
-	protected static $instance = null;
+	protected static $instance = NULL;
 	/**
 	 * Currently rendered view instance reference.
 	 * Everytime, when there is rendered different view script,
