@@ -20,7 +20,7 @@ namespace MvcCore\Ext\Views\Helpers;
  *   All view helpers are stored inside `\Mvccore\View` and they are created only once.
  *   But if you need to configure view helper anytime before, you can use this method
  *   for singleton instancing to configure anything staticly anytime before.
- * - Everytime, when currently rendered view object is changed (action view, layout view,
+ * - Every time, when currently rendered view object is changed (action view, layout view,
  *   subcontroller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
  *   method giving currently rendered view object. From this object, you can get properties
  *   for better view helper processing like application object, controller, request or response object.
@@ -29,7 +29,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 {
 	/**
 	 * MvcCore Extension - View Helper - Line Breaks - version:
-	 * Comparation by PHP function version_compare();
+	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
 	const VERSION = '5.0.0-alpha';
@@ -37,7 +37,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	protected static $instance = NULL;
 	/**
 	 * Currently rendered view instance reference.
-	 * Everytime, when there is rendered different view script,
+	 * Every time, when there is rendered different view script,
 	 * this view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
 	 * @var \MvcCore\View|\MvcCore\IView
 	 */
@@ -45,7 +45,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 
 	/**
 	 * Currently used controller instance reference for currently rendered view script.
-	 * Everytime, when there is rendered different view script,
+	 * Every time, when there is rendered different view script,
 	 * this controller and also view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
 	 * @var \MvcCore\Controller|\MvcCore\IController
 	 */
