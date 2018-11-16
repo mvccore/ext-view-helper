@@ -15,13 +15,13 @@ namespace MvcCore\Ext\Views\Helpers;
 
 /**
  * Responsibility - better view helper setup.
- * - Everytine, when there is necessary to create view helper, there is called
- *   `\MvcCore\Ext\Views\Helpers\IHelper::GetInstance();` method in `\Mvccore\View`.
- *   All view helpers are stored inside `\Mvccore\View` and they are created only once.
+ * - Every time, when there is necessary to create view helper, there is called
+ *   `\MvcCore\Ext\Views\Helpers\IHelper::GetInstance();` method in `\MvcCore\View`.
+ *   All view helpers are stored inside `\MvcCore\View` and they are created only once.
  *   But if you need to configure view helper anytime before, you can use this method
- *   for singleton instancing to configure anything staticly anytime before.
+ *   for singleton instancing to configure anything statically anytime before.
  * - Every time, when currently rendered view object is changed (action view, layout view,
- *   subcontroller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
+ *   sub-controller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
  *   method giving currently rendered view object. From this object, you can get properties
  *   for better view helper processing like application object, controller, request or response object.
  */
