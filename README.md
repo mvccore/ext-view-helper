@@ -50,4 +50,4 @@ class FormatNumber extends \MvcCore\Ext\Views\Helpers\AbstractHelper
 
 # Behaviour
 - Your view helper will be created by static method `GetInstance()` as singleton with abstract class `AbstractHelper`.
-- Everytime, when there will be rendered different view script (action view, layout view or subcontroller view), there will be called automaticly method `AbstractHelper::SetView($view);` to setup view object or other objects inside helper to actual ones.
+- Everytime, when there will be rendered different view script (action view, layout view or sub-controller view), there will be called automatically method `AbstractHelper::SetView($view);` to setup view object or other objects inside helper to actual ones.
