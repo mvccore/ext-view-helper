@@ -24,11 +24,13 @@ namespace MvcCore\Ext\Views\Helpers;
  *   sub-controller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
  *   method giving currently rendered view object. From this object, you can get properties
  *   for better view helper processing like application object, controller, request or response object.
+ * @method \MvcCore\Ext\Views\Helpers\IHelper GetInstance()
  */
 interface IHelper
 {
 	/**
 	 * Create view helper instance, every time new instance or singleton instance, it's up to you.
+	 * @static
 	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	public static function & GetInstance ();
