@@ -33,7 +33,7 @@ interface IHelper
 	 * @static
 	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
-	public static function & GetInstance ();
+	public static function GetInstance ();
 
 	/**
 	 * Set currently rendered view instance every time this helper
@@ -46,5 +46,5 @@ interface IHelper
 	 * @param \MvcCore\View|\MvcCore\IView $view
 	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
-	public function & SetView (\MvcCore\IView & $view);
+	public function SetView (\MvcCore\IView $view);
 }

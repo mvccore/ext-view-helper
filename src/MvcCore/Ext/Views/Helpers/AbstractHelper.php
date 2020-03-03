@@ -80,7 +80,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * @static
 	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 */
-	public static function & GetInstance () {
+	public static function GetInstance () {
 		if (!static::$instance) static::$instance = new static();
 		return static::$instance;
 	}
@@ -96,11 +96,11 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * @param \MvcCore\View|\MvcCore\IView $view
 	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 */
-	public function & SetView (\MvcCore\IView & $view) {
-		$this->view = & $view;
-		$this->controller = & $view->GetController();
-		$this->request = & $this->controller->GetRequest();
-		$this->response = & $this->controller->GetResponse();
+	public function SetView (\MvcCore\IView $view) {
+		$this->view = $view;
+		$this->controller = $view->GetController();
+		$this->request = $this->controller->GetRequest();
+		$this->response = $this->controller->GetResponse();
 		return $this;
 	}
 }
