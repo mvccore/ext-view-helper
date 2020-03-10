@@ -35,6 +35,10 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	const VERSION = '5.0.0-alpha';
 
+	/**
+	 * Instance store used by method `GetInstance()\`.
+	 * @var \MvcCore\Ext\Views\Helpers\AbstractHelper|NULL
+	 */
 	protected static $instance = NULL;
 
 	/**
