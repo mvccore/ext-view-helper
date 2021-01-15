@@ -7,7 +7,7 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
@@ -26,8 +26,8 @@ namespace MvcCore\Ext\Views\Helpers;
  *   for better view helper processing like application object, controller, request or response object.
  * @method \MvcCore\Ext\Views\Helpers\IHelper GetInstance()
  */
-interface IHelper
-{
+interface IHelper {
+
 	/**
 	 * Create view helper instance, every time new instance or singleton instance, it's up to you.
 	 * @static
@@ -43,7 +43,7 @@ interface IHelper
 	 * - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\IController`
 	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\IRequest`
 	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\IResponse`
-	 * @param \MvcCore\View|\MvcCore\IView $view
+	 * @param \MvcCore\View $view
 	 * @return \MvcCore\Ext\Views\Helpers\IHelper
 	 */
 	public function SetView (\MvcCore\IView $view);

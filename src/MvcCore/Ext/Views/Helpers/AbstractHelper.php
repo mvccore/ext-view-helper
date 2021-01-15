@@ -7,7 +7,7 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
  * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
@@ -26,14 +26,14 @@ namespace MvcCore\Ext\Views\Helpers;
  *   for better view helper processing like application object, controller, request or response object.
  * @method \MvcCore\Ext\Views\Helpers\AbstractHelper GetInstance()
  */
-abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
-{
+abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
+
 	/**
 	 * MvcCore Extension - View Helper - Line Breaks - version:
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.0-alpha';
+	const VERSION = '5.0.0';
 
 	/**
 	 * Instance store used by method `GetInstance()`.
@@ -45,7 +45,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Currently rendered view instance reference.
 	 * Every time, when there is rendered different view script,
 	 * this view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
-	 * @var \MvcCore\View|\MvcCore\IView
+	 * @var \MvcCore\View
 	 */
 	protected $view = NULL;
 
@@ -53,19 +53,19 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * Currently used controller instance reference for currently rendered view script.
 	 * Every time, when there is rendered different view script,
 	 * this controller and also view property is changed by method `\MvcCore\Ext\Views\Helpers\AbstractHelper::SetView();`.
-	 * @var \MvcCore\Controller|\MvcCore\IController
+	 * @var \MvcCore\Controller
 	 */
 	protected $controller = NULL;
 
 	/**
 	 * Current request object reference from used controller.
-	 * @var \MvcCore\Request|\MvcCore\IRequest
+	 * @var \MvcCore\Request
 	 */
 	protected $request = NULL;
 
 	/**
 	 * Current response object reference from used controller.
-	 * @var \MvcCore\Response|\MvcCore\IResponse
+	 * @var \MvcCore\Response
 	 */
 	protected $response = NULL;
 
@@ -97,7 +97,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper
 	 * - `AbstractHelper::$controller` as `\MvcCore\Controller|\MvcCore\IController`
 	 * - `AbstractHelper::$request` as `\MvcCore\Request|\MvcCore\IRequest`
 	 * - `AbstractHelper::$response` as `\MvcCore\Response|\MvcCore\IResponse`
-	 * @param \MvcCore\View|\MvcCore\IView $view
+	 * @param \MvcCore\View $view
 	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
 	 */
 	public function SetView (\MvcCore\IView $view) {
