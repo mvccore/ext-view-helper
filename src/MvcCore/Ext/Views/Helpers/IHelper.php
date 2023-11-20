@@ -29,6 +29,13 @@ namespace MvcCore\Ext\Views\Helpers;
 interface IHelper {
 
 	/**
+	 * Default view helper invoke method used in single file applications.
+	 * @param  string $groupName
+	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
+	 */
+	public function __invoke ();
+
+	/**
 	 * Create view helper instance, every time new instance or singleton instance, it's up to you.
 	 * @static
 	 * @return \MvcCore\Ext\Views\Helpers\IHelper

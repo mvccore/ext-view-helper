@@ -33,7 +33,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.0';
+	const VERSION = '5.2.0';
 
 	/**
 	 * Instance store used by method `GetInstance()`.
@@ -68,6 +68,20 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
 	 * @var \MvcCore\Response
 	 */
 	protected $response = NULL;
+	
+	/**
+	 * Default view helper invoke method used in single file applications.
+	 * @param  string $groupName
+	 * @return \MvcCore\Ext\Views\Helpers\AbstractHelper
+	 */
+	public function __invoke () {
+		$className = basename(get_called_class());
+		$helperSubstr = 'Helper';
+		$helperPos = mb_strlen($className) - 6;
+		if (mb_strpos($className, $helperSubstr) === $helperPos)
+			$className = mb_substr($className, 0, $helperPos);
+		return call_user_func_array([$this, $className], func_get_args());
+	}
 
 	/**
 	 * Create view helper instance as singleton.
