@@ -24,7 +24,7 @@ namespace MvcCore\Ext\Views\Helpers;
  *   sub-controller view...), there is called `\MvcCore\Ext\Views\Helpers\IHelper::SetView($view);`
  *   method giving currently rendered view object. From this object, you can get properties
  *   for better view helper processing like application object, controller, request or response object.
- * @method \MvcCore\Ext\Views\Helpers\AbstractHelper GetInstance()
+ * @method static \MvcCore\Ext\Views\Helpers\AbstractHelper GetInstance()
  */
 abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
 
