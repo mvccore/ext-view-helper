@@ -33,7 +33,7 @@ abstract class AbstractHelper implements \MvcCore\Ext\Views\Helpers\IHelper {
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.2.2';
+	const VERSION = '5.3.0';
 
 	/**
 	 * Instance store used by method `GetInstance()`.
